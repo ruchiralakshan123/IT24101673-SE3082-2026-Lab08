@@ -1,0 +1,36 @@
+
+$ mpirun --oversubscribe --allow-run-as-root -np 1 ./bin/pi_any_source
+Estimated Pi = 3.1407308
+Processes = 1
+TIME_SECONDS=0.231507397
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 2 ./bin/pi_any_source
+Received result from rank 1
+Estimated Pi = 3.1412116
+Processes = 2
+TIME_SECONDS=0.2564538
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 4 ./bin/pi_any_source
+Received result from rank 2
+Received result from rank 1
+Received result from rank 3
+Estimated Pi = 3.1415
+Processes = 4
+TIME_SECONDS=0.231912333
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 8 ./bin/pi_any_source
+Received result from rank 6
+Received result from rank 2
+Received result from rank 3
+Received result from rank 4
+Received result from rank 7
+Received result from rank 1
+Received result from rank 5
+Estimated Pi = 3.1413984
+Processes = 8
+TIME_SECONDS=0.228027408
+[exit code: 0]
+

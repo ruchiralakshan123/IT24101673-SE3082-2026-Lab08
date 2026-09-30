@@ -1,0 +1,12 @@
+
+$ mpirun --oversubscribe --allow-run-as-root -np 4 ./bin/hello_mpi
+Just a normal process from rank 1 of 4 on machine vm
+Just a normal process from rank 3 of 4 on machine vm
+Hello World! From rank 0 of 4 on machine vm
+Just a normal process from rank 2 of 4 on machine vm
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 1 ./bin/hello_mpi
+Hello World! From rank 0 of 1 on machine vm
+[exit code: 0]
+

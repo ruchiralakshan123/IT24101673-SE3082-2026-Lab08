@@ -1,0 +1,24 @@
+# Exercise 4 - Measured results
+
+Captured by running scripts/benchmark.sh on a 1 vCPU sandbox (Ubuntu 24.04, OpenMPI, --oversubscribe).
+
+IMPORTANT: this machine has a single CPU core, so 2/4/8 MPI processes time-share one core and cannot run in parallel.
+Speedup here is therefore ~1 (or noise). To show real speedup, re-run `bash scripts/benchmark.sh` on a multi-core machine or the lab cluster and use those numbers/graphs in your report.
+
+## Parallel sum (Exercise 2)
+
+| Processors | Time (s) | Speedup (T1/Tp) |
+|---|---|---|
+| 1 | 0.002445 | 1.00 |
+| 2 | 0.003491 | 0.70 |
+| 4 | 0.002734 | 0.89 |
+| 8 | 0.000441 | 5.54 |
+
+## Monte Carlo Pi (Exercise 3)
+
+| Processors | Time (s) | Speedup (T1/Tp) |
+|---|---|---|
+| 1 | 0.239966 | 1.00 |
+| 2 | 0.264349 | 0.91 |
+| 4 | 0.231586 | 1.04 |
+| 8 | 0.245378 | 0.98 |

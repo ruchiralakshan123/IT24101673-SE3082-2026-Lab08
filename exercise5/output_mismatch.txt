@@ -1,0 +1,8 @@
+
+$ mpirun --oversubscribe --allow-run-as-root -np 3 ./bin/mismatch
+Rank 1 incorrectly waits for a message from rank 2.
+Rank 0 sends value 99 to rank 1 (tag 0).
+Rank 0 completed MPI_Send.
+[program hung - killed by timeout after 10s]
+[exit code: 124]
+

@@ -1,0 +1,33 @@
+
+$ mpirun --oversubscribe --allow-run-as-root -np 1 ./bin/parallel_sum
+Processes: 1
+Sum 1..10000000 = 50000005000000
+Expected = 50000005000000
+Correct: YES
+TIME_SECONDS=0.00246054
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 2 ./bin/parallel_sum
+Processes: 2
+Sum 1..10000000 = 50000005000000
+Expected = 50000005000000
+Correct: YES
+TIME_SECONDS=0.00250506
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 4 ./bin/parallel_sum
+Processes: 4
+Sum 1..10000000 = 50000005000000
+Expected = 50000005000000
+Correct: YES
+TIME_SECONDS=0.0025957
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 8 ./bin/parallel_sum
+Processes: 8
+Sum 1..10000000 = 50000005000000
+Expected = 50000005000000
+Correct: YES
+TIME_SECONDS=0.00214466
+[exit code: 0]
+

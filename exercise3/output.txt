@@ -1,0 +1,29 @@
+
+$ mpirun --oversubscribe --allow-run-as-root -np 1 ./bin/monte_carlo_pi
+Processes: 1
+Samples: 10000000
+Estimated Pi = 3.1407308
+TIME_SECONDS=0.247721219
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 2 ./bin/monte_carlo_pi
+Processes: 2
+Samples: 10000000
+Estimated Pi = 3.1412116
+TIME_SECONDS=0.248481683
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 4 ./bin/monte_carlo_pi
+Processes: 4
+Samples: 10000000
+Estimated Pi = 3.1415
+TIME_SECONDS=0.249353483
+[exit code: 0]
+
+$ mpirun --oversubscribe --allow-run-as-root -np 8 ./bin/monte_carlo_pi
+Processes: 8
+Samples: 10000000
+Estimated Pi = 3.1413984
+TIME_SECONDS=0.226510471
+[exit code: 0]
+
